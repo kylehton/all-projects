@@ -32,7 +32,7 @@ bool operator<(Length a, Length b)
 }
 
 //************************************
-// Overloaded istream operator >>             *
+// Overloaded istream operator >>*
 //************************************
 istream &operator>>(istream &in, Length &a)
 {
@@ -42,6 +42,9 @@ istream &operator>>(istream &in, Length &a)
      in >> feet;
      cout << "Enter inches: ";
      in >> inches;
+
+     a.setLength(feet, inches);//uses setLength() to change variable value
+     return in;//returns istream to continue to next line
 }
 
 //************************************
@@ -49,6 +52,7 @@ istream &operator>>(istream &in, Length &a)
 //************************************
 ostream &operator<<(ostream& out, Length a)
 {
-     out << a.getFeet() << " feet, " << a.getInches() << "inches";
-     return out;
+     //gathers all output to an ostream variable
+     out << a.getFeet() << " feet, " << a.getInches() << " inches";
+     return out;//returns out ostream variable to print when cout called upon
 }
