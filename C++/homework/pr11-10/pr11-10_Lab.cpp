@@ -1,8 +1,9 @@
 // This program demonstrates the Length class's overloaded
 // +, −, ==, and < operators.
+//It also demonstrates overloaded istream and ostream operators.
 #include <iostream>
-#include "Length1.h"
-#include "Length1.cpp"
+#include "Length.h"
+#include "Length.cpp"
 using namespace std;
 
 int main() 

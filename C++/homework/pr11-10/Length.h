@@ -36,5 +36,7 @@ class Length
      friend Length operator-(Length a, Length b);
      friend bool operator<(Length a, Length b);
      friend bool operator==(Length a, Length b);
+     friend ostream &operator<<(ostream &out, Length a);
+     friend istream &operator>>(istream &in, Length &a);
 };
 #endif
